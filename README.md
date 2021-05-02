@@ -5,4 +5,7 @@ This is a Game Installer Creation research for the Project II subject on CITM-UP
 
 ## About the author
 **Arnau Bonada Campos**: Student of Degree in Video Game Design and Development in UPC-CITM Terrassa.
-- GitHub: 
+- GitHub: [arnaubonada](https://github.com/arnaubonada)
+- Contact: bonada.arnau@gmail.com
+
+## Relevant Links

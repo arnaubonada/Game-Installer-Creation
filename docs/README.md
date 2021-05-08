@@ -29,6 +29,11 @@ In order to create this installation package it is necessary to use a technique 
 Microsoft Windows Installer, also known as MSI or Windows Installer, is an installer package file format used by Windows. The installer service enables customers to provide a better corporate implementation and provides a standard format for component management. MSI files are used for installation, storage and removal of programs. This MSI files are database files, used by Windows Installer, and they contain information about an application which is divided into features and components, and every component may hold files, registry data, shortcuts, etc. MSI files are executed by an EXE file that is part of Windows, called MSIEXEC.EXE. This application reads the data in the MSI file and executes the installation.
 
 ### Windows Installer functions
+The Windows Installer service was designed to support every phase of the application management life cycle, providing a service to support each step involved in managing a desktop application from deployment through retirement. To support these functions, the Windows Installer needs to receive instructions from an installation package.
+<p align="center">
+<img src="https://github.com/CarlosUPC/Installer-Research/blob/master/docs/cycle_life.png?raw=true" 
+width="600">
+</p>
 - Automatic add and remove, uninstall, reinstall, and repair support. If an application is already installed, Windows Installer will detect it and display a maintenance user interface instead of an application install interface.
 - In maintenance mode, Windows Installer detects which parts of an application are installed and can allow a user to add or remove features or reinstall the application. The repair functionality also appears in maintenance mode, but is also automatically run every time a shortcut for the application is activated in Windows 2000. The repair functionality is particularly useful for administrators whose users like to recklessly clean up disk space. The next time the "broken" application runs, Windows Installer checks a key list of files and registry keys, and repairs the application if needed. The install author also gets built-in network install functionality.
 - Administrators will also benefit from the Installer's advertising feature. Advertising allows an application to appear to be installed, but files are not actually installed on the system until the application is activated through a shortcut, extension, or COM server. Advertising makes an application available on the desktop, but since it's not installed until it is activated, companies save on licensing fees and disk space. Once a user clicks on a shortcut or double-clicks on a file associated with that application, the application installs automatically.
@@ -49,3 +54,4 @@ https://en.wikipedia.org/wiki/Installation_(computer_programs)
 https://docs.microsoft.com/en-us/windows/win32/msi/installation-package
 https://docs.microsoft.com/en-us/windows/win32/dxtecharts/installation-and-maintenance-of-games
 https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=1b1b89b8-c3a0-4bbd-a498-44f76a777eb9&CommunityKey=41d8253b-a238-4563-8718-ed7623beafbc&tab=librarydocuments
+https://www.dell.com/downloads/global/power/ps4q05-20050175-Kouletsis.pdf

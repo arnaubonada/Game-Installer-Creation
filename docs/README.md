@@ -26,7 +26,7 @@ And can also contain:
 In order to create this installation package it is necessary to use a technique to be able to achieve it, which is called Application Packaging. Application packaging involves the preparation of standard, structured software installations targeted for automated deployment. To enable this level of application management, Microsoft now provides the Microsoft Windows Installer (MSI) service as a part of its desktop operating systems.
 
 ### What is Microsoft Windows Installer (MSI)?
-Microsoft Windows Installer, also known as MSI or Windows Installer, is an installer package file format used by Windows. MSI files are used for installation, storage and removal of programs. This MSI files are database files, used by Windows Installer, and they contain information about an application which is divided into features and components, and every component may hold files, registry data, shortcuts, etc. MSI files are executed by an EXE file that is part of Windows, called MSIEXEC.EXE. This application reads the data in the MSI file and executes the installation.
+Microsoft Windows Installer, also known as MSI or Windows Installer, is an installer package file format used by Windows. The installer service enables customers to provide a better corporate implementation and provides a standard format for component management. MSI files are used for installation, storage and removal of programs. This MSI files are database files, used by Windows Installer, and they contain information about an application which is divided into features and components, and every component may hold files, registry data, shortcuts, etc. MSI files are executed by an EXE file that is part of Windows, called MSIEXEC.EXE. This application reads the data in the MSI file and executes the installation.
 
 ### Windows Installer functions
 - Automatic add and remove, uninstall, reinstall, and repair support. If an application is already installed, Windows Installer will detect it and display a maintenance user interface instead of an application install interface.
@@ -48,3 +48,4 @@ Microsoft Windows Installer, also known as MSI or Windows Installer, is an insta
 https://en.wikipedia.org/wiki/Installation_(computer_programs)
 https://docs.microsoft.com/en-us/windows/win32/msi/installation-package
 https://docs.microsoft.com/en-us/windows/win32/dxtecharts/installation-and-maintenance-of-games
+https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=1b1b89b8-c3a0-4bbd-a498-44f76a777eb9&CommunityKey=41d8253b-a238-4563-8718-ed7623beafbc&tab=librarydocuments

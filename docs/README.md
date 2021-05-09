@@ -61,7 +61,7 @@ Signing an application package provides the user with verification that the appl
 
 There are many methods and ways to approach this topic. Since we are making use of .msi files for the deployment of applications, the best option at the moment is **SignTool.exe**. SignTool is a command line tool that is used to sign an application package or a set of applications with a certificate.
 
-The tool is installed in the Bin folder of the Microsoft Windows Software Development Kit (SDK) installation path. Then we need Microsoft Windows SDK to be able to work with SignTool.exe.
+We need Microsoft Windows SDK to be able to work with SignTool.exe. The tool is installed in the Bin folder of the Microsoft Windows Software Development Kit (SDK) installation path.
 
 You need to follow this steps:
 - Install the certificate you want to sign the file with in the development computer.
@@ -71,10 +71,40 @@ You need to follow this steps:
 ```cpp
 signtool sign /sha1 CertificateHash SetupNameFile.msi
 ```
+## Test in a Virtual Machine
+In order to test the game on diferents Operation Systems and its previous versions, we will need a Virtual Machine. Virtual machines are one of the safest ways to test software. This method allows you to simulate a full operating system, isolated from the rest of your machine. The tool chosen to create virtual machines is **VirtualBox**.
 
-## Selected approach
+Oracle VM VirtualBox is a free and open-source compatible with Windows, macOS, Linux, Solaris and OpenSolaris. Basically it supports the creation and management of guest virtual machines. It is aimed both for enterprises and home use.
+To test the program in the virtual machine, you must follow this steps:
+- Install and open VirtualBox. Be sure to install the property platform package according to your current OS
+- Click "New" to create a new virtual machine. You can check out our guide here for detailed instructions, but the wizard should make it fairly simple. You will need to download the ISO file according to the OS you want to try.
+- Install the operating system of your choice on the virtual machine.
+- Before you install anything else, take a snapshot. This will allow you to revert to your original install, without any change of states, after you are done testing.
 
-## Possible improvents
+## NSIS: Packaging Tool
+We need to create MSI files to build the installation package in the correct MSI database format, and we must collect information about each application. Items include executable files, installation instructions, configuration parameters, test instructions, and hardware and software dependencies.
+
+Best practices recommend that installation packages be created by experienced packaging engineers, using tools specifically developed for that purpose.
+NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers. It is designed to be as small and flexible as possible and is therefore very suitable for internet distribution.
+
+NSIS is script-based and allows you to create the logic to handle even the most complex installation tasks. Many plug-ins and scripts are already available: you can create web installers, communicate with Windows and other software components, install or update shared components and more.
+
+This are the features of NSIS:
+- Small overhead size
+- Compatible with all major Windows versions
+- Unique compression methods
+- Script based
+- Multiple languages in one installer
+- Many features and checks for the target system
+- Custom dialogs and interfaces
+- Plug-in system
+- Support for web installation and file patching
+- Project integration, different releases and automatic builds
+- Easy and human readable file formats
+- Portable Compiler
+- Free to use. See [License](https://nsis.sourceforge.io/License)
+
+### Implement NSIS to your game
 
 ## Examples
 
@@ -91,8 +121,13 @@ https://community.broadcom.com/symantecenterprise/communities/community-home/lib
 
 https://www.dell.com/downloads/global/power/ps4q05-20050175-Kouletsis.pdf
 
-https://nsis.sourceforge.io/Main_Page
+https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/ee290833(v=vs.100)
+
 
 https://en.wikipedia.org/wiki/Digital_signature
 
+https://en.wikipedia.org/wiki/VirtualBox
 
+https://www.virtualbox.org/
+
+https://nsis.sourceforge.io/Main_Page

@@ -82,9 +82,17 @@ signtool sign /sha1 CertificateHash SetupNameFile.msi
 
 ## Documentation
 https://en.wikipedia.org/wiki/Installation_(computer_programs)
+
 https://docs.microsoft.com/en-us/windows/win32/msi/installation-package
+
 https://docs.microsoft.com/en-us/windows/win32/dxtecharts/installation-and-maintenance-of-games
+
 https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=1b1b89b8-c3a0-4bbd-a498-44f76a777eb9&CommunityKey=41d8253b-a238-4563-8718-ed7623beafbc&tab=librarydocuments
+
 https://www.dell.com/downloads/global/power/ps4q05-20050175-Kouletsis.pdf
+
 https://nsis.sourceforge.io/Main_Page
+
 https://en.wikipedia.org/wiki/Digital_signature
+
+

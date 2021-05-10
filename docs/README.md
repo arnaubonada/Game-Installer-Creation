@@ -111,8 +111,28 @@ This exercises will help to learn how to create your installer, with NSIS. To st
 
 Once the .exe is downloaded, you have to click on it and the NSIS Installer will start running. Now, default options are recommended in order to install the program.
 
-
 ## Examples
+### Example 1: Create your Installer
+To create your own Installer, you need a .zip file. Once you have your ***.zip*** to create your ***.exe***, you have to open the NSIS menu and select "Installer based on .ZIP file". This will open a new window, where you have to select your .zip by clicking "Open...". It is recommended to leave the default options selected. Then click on "Generate".
+
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig3.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 3. NSIS Menu
+</p>
+
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig4.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 4. Software to convert a .zip to a .exe
+</p>
+
+### Example 2: Load the Icon of your game
+All games have their own installer. And in each installer there is an *.exe* with its own icon. This icon has to be in ***.ico*** format.
+
+First of all, you need to add your icon .ico to your project. To do this, open Visual Studio and choose a folder where you want to save your icon. For example, 
 
 ## Exercises
 

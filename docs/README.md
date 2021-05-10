@@ -1,7 +1,7 @@
 # Game Installer Creation
-On this research you will find out what a game installer is and how to implement it in your own game. 
+My name is Arnau Bonada, and I'm a student of Degree in Video Game Design and Development in UPC-CITM Terrassa. This is a project research for the Project II subject. On this research you will find out what a game installer is and how to implement it in your own game. 
 
-## Introduction
+## Introduction to Installation
 First of all, it is necessary to clarify what is meant when talking about installation. Starting with the installation of software, is the act of making the program ready for execution.
 There are different processes of installing a piece of software. Because the process is different for each program and each computer, programs often come with an installer, a specialised program responsible for performing everything required for installation.
 Installation generally involves code being copied or generated from the installation files to new files on the local computer. This is done for the following reasons:
@@ -25,7 +25,7 @@ And can also contain:
 
 In order to create this installation package it is necessary to use a technique to be able to achieve it, which is called Application Packaging. Application packaging involves the preparation of standard, structured software installations targeted for automated deployment. To enable this level of application management, Microsoft now provides the Microsoft Windows Installer (MSI) service as a part of its desktop operating systems.
 
-### What is Microsoft Windows Installer (MSI)?
+## What is Microsoft Windows Installer (MSI)?
 Microsoft Windows Installer, also known as MSI or Windows Installer, is an installer package file format used by Windows. The installer service enables customers to provide a better corporate implementation and provides a standard format for component management. MSI files are used for installation, storage and removal of programs. This MSI files are database files, used by Windows Installer, and they contain information about an application which is divided into features and components, and every component may hold files, registry data, shortcuts, etc. MSI files are executed by an EXE file that is part of Windows, called MSIEXEC.EXE. This application reads the data in the MSI file and executes the installation.
 
 ### Windows Installer functions
@@ -105,6 +105,12 @@ This are the features of NSIS:
 - Free to use. See [License](https://nsis.sourceforge.io/License)
 
 ### Implement NSIS to your game
+Now is the moment to put everything explained previously into practice. First of all, there will be some examples to understand how it works, and then there will be exercises (TODOs) and their respective solutions.
+
+This exercises will help to learn how to create your installer, with NSIS. To start with the Installer, you must install the software. The link can be found [here](https://nsis.sourceforge.io/Download).
+
+Once the .exe is downloaded, you have to click on it and the NSIS Installer will start running. Now, default options are recommended in order to install the program.
+
 
 ## Examples
 
@@ -122,7 +128,6 @@ https://community.broadcom.com/symantecenterprise/communities/community-home/lib
 https://www.dell.com/downloads/global/power/ps4q05-20050175-Kouletsis.pdf
 
 https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/ee290833(v=vs.100)
-
 
 https://en.wikipedia.org/wiki/Digital_signature
 

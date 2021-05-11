@@ -84,7 +84,8 @@ To test the program in the virtual machine, you must follow this steps:
 ## NSIS: Packaging Tool
 We need to create MSI files to build the installation package in the correct MSI database format, and we must collect information about each application. Items include executable files, installation instructions, configuration parameters, test instructions, and hardware and software dependencies.
 
-Best practices recommend that installation packages be created by experienced packaging engineers, using tools specifically developed for that purpose.
+Best practices recommend that installation packages be created by experienced packaging engineers, using tools specifically developed for that purpose. The tool I have chosen is NSIS, but there are other equally valid alternatives that offer interesting options to create your installer. For example, there are software similar to NSIS, such as [Inno Setup](https://jrsoftware.org/isinfo.php) or [WIX Toolset](https://wixtoolset.org/).
+
 NSIS (Nullsoft Scriptable Install System) is a professional open source system to create Windows installers. It is designed to be as small and flexible as possible and is therefore very suitable for internet distribution.
 
 NSIS is script-based and allows you to create the logic to handle even the most complex installation tasks. Many plug-ins and scripts are already available: you can create web installers, communicate with Windows and other software components, install or update shared components and more.
@@ -145,8 +146,16 @@ To create your own installer, you will need some tools to configure as desired. 
 
 You have to download a *.zip*. Once downloaded, you should unzip it and run the *.exe*. This will open the software. Once you click on Next, you will be able to custom your Installer Setup. Here you need to specify a lot about your project and how do you want your installer to be. Each user can customize it however they want. In any case, it is important to fill in all the boxes, especially those that ask for the .exe and the files folder. If you want to add a License to the Installer, you will need to convert your License to *.txt*.
 
-### TODO 3: 
+### TODO 3: Add your logo to your Installer 
+If you have done the previous exercise correctly, a *.nsi* script will have been created. This script is used to edit your installer to your own liking.
 
+A very clear example is adding the game's logo to the installer, so when users are installing the game can visualize. This is exactly what has to be done in this TODO. To do this, you need to know that the language used in the *.nsi* files is special. To learn how to use it you can enter this [link](https://nsis.sourceforge.io/Docs/Modern%20UI/Readme.html).
+
+Two changes have to be made in the script: one to add a small *.ico* icon at the top left, and the other to add a *.bmp* Header Image to the installer that will appear during installation. For the *.ico*, you can use the same as before, and for the *.bmp*, you need to create a new one or change the format. A quick and efficient method is to use **Paint**, and save as .bmp (24 bit) (recommended size: 150x57 pixels).
+
+**Hint:** use **!define MUI_XXXXXXX** below **!include "MUI.nsh"**. Using the simplest method, one line for the *.ico* and two lines for the *.bmp* is sufficient. But more details can be added to customize the installer.
+
+After editing the *.nsi* script, you need to save it and open the NSIS program. Then you have to compile the script. To do this, select "*Compile NSI scripts*", and once the new window is open, click on "*File*" and "*Load Script...*". When it loads you will be able to test the installer and check if you have done it well.
 
 ## Solutions
 ### TODO 1 - Solution 
@@ -198,30 +207,48 @@ Figure 10. NSIS Quick Setup Script Generator: Installation Preferences
 Figure 11. NSIS Quick Setup Script Generator: Compiler Preferences
 </p>
 
-After these steps, an *.exe* will have been created that will be the installer, and a *.nsi* that will be the script. If you did TODO 1 properly, when you run your installer, the shortcut that is created on the desktop will have the .ico icon added before.
+After these steps, an *.exe* will have been created that will be the installer, and a *.nsi* that will be the script. If you did TODO 1 properly, when you run your installer, the shortcut that is created on the desktop will have the *.ico* icon added before.
 
 ### TODO 3 - Solution 
+In this image you can see a possible solution:
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_12_.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 12. Simplest solution of TODO 3
+</p>
 
+And this is how the installer would look:
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_13.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 13. Installer after TODO 3
+</p>
 
 ## Documentation
-https://en.wikipedia.org/wiki/Installation_(computer_programs)
+[Installation](https://docs.microsoft.com/en-us/windows/win32/dxtecharts/installation-and-maintenance-of-games)
 
-https://docs.microsoft.com/en-us/windows/win32/msi/installation-package
+[Installation - Wikipedia](https://en.wikipedia.org/wiki/Installation_(computer_programs))
 
-https://docs.microsoft.com/en-us/windows/win32/dxtecharts/installation-and-maintenance-of-games
+[Installation Package](https://docs.microsoft.com/en-us/windows/win32/msi/installation-package)
 
-https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=1b1b89b8-c3a0-4bbd-a498-44f76a777eb9&CommunityKey=41d8253b-a238-4563-8718-ed7623beafbc&tab=librarydocuments
+[Microsoft Windows Installer (MSI)](https://community.broadcom.com/symantecenterprise/communities/community-home/librarydocuments/viewdocument?DocumentKey=1b1b89b8-c3a0-4bbd-a498-44f76a777eb9&CommunityKey=41d8253b-a238-4563-8718-ed7623beafbc&tab=librarydocuments)
 
-https://www.dell.com/downloads/global/power/ps4q05-20050175-Kouletsis.pdf
+[Application Packaging](https://www.dell.com/downloads/global/power/ps4q05-20050175-Kouletsis.pdf)
 
-https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/ee290833(v=vs.100)
+[Windows Certificate](https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh694081(v=win.10))
 
-https://en.wikipedia.org/wiki/Digital_signature
+[Sign Files with SignTool.exe](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2010/ee290833(v=vs.100))
 
-https://en.wikipedia.org/wiki/VirtualBox
+[Digital Signature](https://en.wikipedia.org/wiki/Digital_signature)
 
-https://www.virtualbox.org/
+[VirtualBox](https://www.virtualbox.org/)
 
-https://nsis.sourceforge.io/Main_Page
+[VirtualBox - Wikipedia](https://en.wikipedia.org/wiki/VirtualBox)
 
-https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh694081(v=win.10)
+[NSIS](https://nsis.sourceforge.io/Main_Page)
+
+[NSIS - Wikipedia](https://en.wikipedia.org/wiki/Nullsoft_Scriptable_Install_System)
+
+[NSIS - Scripts](https://nsis.sourceforge.io/Docs/Modern%20UI/Readme.html)

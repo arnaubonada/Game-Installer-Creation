@@ -126,15 +126,38 @@ Figure 3. NSIS Menu
 <img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig4.png?raw=true" width="500">
 </p>
 <p align="center">
-Figure 4. Software to convert a .zip to a .exe
+Figure 4. Software to convert .zip to .exe
 </p>
 
-### Example 2: Load the Icon of your game
-All games have their own installer. And in each installer there is an *.exe* with its own icon. This icon has to be in ***.ico*** format.
+### Example 2: Create Scripts
+To create your own installer, you will need some tools to configure as desired. This tools are known as scripts, and the NSIS program itself provides a tool for creating scripts, **NSIS Quick Setup Script Generator**. It is possible to download it [here](https://nsis.sourceforge.io/NSIS_Quick_Setup_Script_Generator).
 
-First of all, you need to add your icon .ico to your project. To do this, open Visual Studio and choose a folder where you want to save your icon. For example, 
+You have to download a *.zip*. Once downloaded, you should unzip it and run the *.exe*. This will open the software. Once you click on Next, you will be able to custom your Installer Setup. Here you need to specify a lot about your project and how do you want your installer to be.
+
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig5.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 5. NSIS Quick Setup Script Generator: Application Info
+</p>
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig6.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 6. NSIS Quick Setup Script Generator: Installation Preferences
+</p>
 
 ## Exercises
+### TODO 1: Load the Icon of your game
+All games have their own installer. And in each installer there is an *.exe* with its own icon. This icon has to be in ***.ico*** format.
+
+In order to create a *.ico*, you need to have the image you want to use (it is recommended that it be square) in *.png*, *.jpg* or similar format. Then, you need to convert the file to *.ico*, and select **size 16x16** pixels. The fastest method is using this [link](https://image.online-convert.com/convert-to-ico).
+
+Once you have your *.ico*, open Visual Studio and **Add new item**. This item has to be a **Resource File (.rc)**. Now, import your Icon by adding a Resource to the new *.rc* folder.
+
+This are the steps to follow. Now you can run the code, a new .exe will be created with your own icon, in the Debug or Release folder, depending on how it was compiled.
+
+## Solutions
 
 ## Documentation
 https://en.wikipedia.org/wiki/Installation_(computer_programs)
@@ -156,3 +179,4 @@ https://en.wikipedia.org/wiki/VirtualBox
 https://www.virtualbox.org/
 
 https://nsis.sourceforge.io/Main_Page
+

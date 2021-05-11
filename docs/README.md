@@ -1,5 +1,5 @@
 # Game Installer Creation
-My name is Arnau Bonada, and I'm a student of Degree in Video Game Design and Development in UPC-CITM Terrassa. This is a project research for the Project II subject. On this research you will find out what a game installer is and how to implement it in your own game. 
+My name is Arnau Bonada, and I'm a student of Degree in Video Game Design and Development in UPC-CITM Terrassa. This is a project research for the Project II subject. On this research you will find out what a game installer is and how to implement it in your own game, and how to test and customize it. 
 
 ## Introduction to Installation
 First of all, it is necessary to clarify what is meant when talking about installation. Starting with the installation of software, is the act of making the program ready for execution.
@@ -31,7 +31,7 @@ Microsoft Windows Installer, also known as MSI or Windows Installer, is an insta
 ### Windows Installer functions
 The Windows Installer service was designed to support every phase of the application management life cycle, providing a service to support each step involved in managing a desktop application from deployment through retirement. To support these functions, the Windows Installer needs to receive instructions from an installation package.
 <p align="center">
-<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig1.png?raw=true" width="500">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_1.png?raw=true" width="500">
 </p>
 <p align="center">
 Figure 1. Application life-cycle tasks supported by Windows Installer
@@ -48,7 +48,7 @@ Windows Installer has many built-in functions that will save you time and effort
 - **Msiexec.exe**: The Msiexec.exe program is a component of Windows Installer. When it is called by Setup, Msiexec.exe uses Msi.dll to read the package (.msi) files, apply any transform (.mst) files, and incorporate command-line options supplied by Setup. The installer performs all installation-related tasks, including copying files to the hard disk, making registry modifications, creating shortcuts on the desktop, and displaying dialog boxes to prompt for user installation preferences when necessary. When Windows Installer is installed on a computer, it changes the registered file type of .msi files so that if you double-click an .msi file, Msiexec.exe runs with that file.
 - **MSI Extensions**: Each installation package includes an .msi file containing the installation database, a summary information stream, and data streams for various parts of the installation. The .msi file can also contain one or more transforms, internal source files, and external source files or cabinet files required by the installation.
 <p align="center">
-<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig2.png?raw=true" width="500">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_2.png?raw=true" width="500">
 </p>
 <p align="center">
 Figure 2. File name extensions used in the Windows Installer service
@@ -61,7 +61,7 @@ Signing an application package provides the user with verification that the appl
 
 There are many methods and ways to approach this topic. Since we are making use of .msi files for the deployment of applications, the best option at the moment is **SignTool.exe**. SignTool is a command line tool that is used to sign an application package or a set of applications with a certificate.
 
-We need Microsoft Windows SDK to be able to work with SignTool.exe. The tool is installed in the Bin folder of the Microsoft Windows Software Development Kit (SDK) installation path.
+We need **Microsoft Windows SDK** to be able to work with SignTool.exe. The tool is installed in the Bin folder of the Microsoft Windows Software Development Kit (SDK) installation path.
 
 You need to follow this steps:
 - Install the certificate you want to sign the file with in the development computer.
@@ -111,53 +111,97 @@ This exercises will help to learn how to create your installer, with NSIS. To st
 
 Once the .exe is downloaded, you have to click on it and the NSIS Installer will start running. Now, default options are recommended in order to install the program.
 
-## Examples
-### Example 1: Create your Installer
+## Example
+### How to create a basic Installer based on .zip
 To create your own Installer, you need a .zip file. Once you have your ***.zip*** to create your ***.exe***, you have to open the NSIS menu and select "Installer based on .ZIP file". This will open a new window, where you have to select your .zip by clicking "Open...". It is recommended to leave the default options selected. Then click on "Generate".
 
 <p align="center">
-<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig3.png?raw=true" width="500">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_3.png?raw=true" width="500">
 </p>
 <p align="center">
 Figure 3. NSIS Menu
 </p>
 
 <p align="center">
-<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig4.png?raw=true" width="500">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_4.png?raw=true" width="500">
 </p>
 <p align="center">
 Figure 4. Software to convert .zip to .exe
 </p>
 
-### Example 2: Create Scripts
-To create your own installer, you will need some tools to configure as desired. This tools are known as scripts, and the NSIS program itself provides a tool for creating scripts, **NSIS Quick Setup Script Generator**. It is possible to download it [here](https://nsis.sourceforge.io/NSIS_Quick_Setup_Script_Generator).
-
-You have to download a *.zip*. Once downloaded, you should unzip it and run the *.exe*. This will open the software. Once you click on Next, you will be able to custom your Installer Setup. Here you need to specify a lot about your project and how do you want your installer to be.
-
-<p align="center">
-<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig5.png?raw=true" width="500">
-</p>
-<p align="center">
-Figure 5. NSIS Quick Setup Script Generator: Application Info
-</p>
-<p align="center">
-<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig6.png?raw=true" width="500">
-</p>
-<p align="center">
-Figure 6. NSIS Quick Setup Script Generator: Installation Preferences
-</p>
 
 ## Exercises
 ### TODO 1: Load the Icon of your game
 All games have their own installer. And in each installer there is an *.exe* with its own icon. This icon has to be in ***.ico*** format.
 
-In order to create a *.ico*, you need to have the image you want to use (it is recommended that it be square) in *.png*, *.jpg* or similar format. Then, you need to convert the file to *.ico*, and select **size 16x16** pixels. The fastest method is using this [link](https://image.online-convert.com/convert-to-ico).
+In order to create a *.ico*, you need to have the image you want to use (it is recommended that it be square) in *.png*, *.jpg* or similar format. Then, you need to convert the file to *.ico*, and it is recommended to select **size 32x32** pixels. The fastest method is using this [link](https://image.online-convert.com/convert-to-ico).
 
 Once you have your *.ico*, open Visual Studio and **Add new item**. This item has to be a **Resource File (.rc)**. Now, import your Icon by adding a Resource to the new *.rc* folder.
 
 This are the steps to follow. Now you can run the code, a new .exe will be created with your own icon, in the Debug or Release folder, depending on how it was compiled.
 
+### TODO 2: Create your customized Installer
+To create your own installer, you will need some tools to configure as desired. This tools are known as scripts, and the NSIS program itself provides a tool for creating scripts, **NSIS Quick Setup Script Generator**. It is possible to download it [here](https://nsis.sourceforge.io/NSIS_Quick_Setup_Script_Generator).
+
+You have to download a *.zip*. Once downloaded, you should unzip it and run the *.exe*. This will open the software. Once you click on Next, you will be able to custom your Installer Setup. Here you need to specify a lot about your project and how do you want your installer to be. Each user can customize it however they want. In any case, it is important to fill in all the boxes, especially those that ask for the .exe and the files folder. If you want to add a License to the Installer, you will need to convert your License to *.txt*.
+
+### TODO 3: 
+
+
 ## Solutions
+### TODO 1 - Solution 
+For the solution of TODO 1, it is necessary to follow these steps indicated in the following images:
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_5.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 5. Open Visual Studio and Add New Item
+</p>
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_6.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 6. Select Resource and Resource File (.rc)
+</p>
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_7.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 7. Add Resource to the new .rc folder
+</p>
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_8.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 8. Import the Icon .ico
+</p>
+
+### TODO 2 - Solution
+In this TODO there is not only one correct solution, but there are more recommended methods. For example, the images below show the options that I checked, and I believe that is the best way to do it. That does not mean that it cannot be changed, since everyone can customize it however they want.
+
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_9.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 9. NSIS Quick Setup Script Generator: Application Info
+</p>
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_10.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 10. NSIS Quick Setup Script Generator: Installation Preferences
+</p>
+<p align="center">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_11.png?raw=true" width="500">
+</p>
+<p align="center">
+Figure 11. NSIS Quick Setup Script Generator: Compiler Preferences
+</p>
+
+After these steps, an *.exe* will have been created that will be the installer, and a *.nsi* that will be the script. If you did TODO 1 properly, when you run your installer, the shortcut that is created on the desktop will have the .ico icon added before.
+
+### TODO 3 - Solution 
+
 
 ## Documentation
 https://en.wikipedia.org/wiki/Installation_(computer_programs)
@@ -180,3 +224,4 @@ https://www.virtualbox.org/
 
 https://nsis.sourceforge.io/Main_Page
 
+https://docs.microsoft.com/en-us/previous-versions/windows/apps/hh694081(v=win.10)

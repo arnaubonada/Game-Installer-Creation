@@ -71,6 +71,7 @@ You need to follow this steps:
 ```cpp
 signtool sign /sha1 CertificateHash SetupNameFile.msi
 ```
+
 ## Test in a Virtual Machine
 In order to test the game on diferents Operation Systems and its previous versions, we will need a Virtual Machine. Virtual machines are one of the safest ways to test software. This method allows you to simulate a full operating system, isolated from the rest of your machine. The tool chosen to create virtual machines is **VirtualBox**.
 
@@ -146,7 +147,7 @@ To create your own installer, you will need some tools to configure as desired. 
 
 You have to download a *.zip*. Once downloaded, you should unzip it and run the *.exe*. This will open the software. Once you click on Next, you will be able to custom your Installer Setup. Here you need to specify a lot about your project and how do you want your installer to be. Each user can customize it however they want. In any case, it is important to fill in all the boxes, especially those that ask for the .exe and the files folder. If you want to add a License to the Installer, you will need to convert your License to *.txt*.
 
-### TODO 3: Add your logo to your Installer 
+### TODO 3: Add your Logo to your Installer 
 If you have done the previous exercise correctly, a *.nsi* script will have been created. This script is used to edit your installer to your own liking.
 
 A very clear example is adding the game's logo to the installer, so when users are installing the game can visualize. This is exactly what has to be done in this TODO. To do this, you need to know that the language used in the *.nsi* files is special. To learn how to use it you can enter this [link](https://nsis.sourceforge.io/Docs/Modern%20UI/Readme.html).

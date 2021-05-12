@@ -213,7 +213,7 @@ After these steps, an *.exe* will have been created that will be the installer, 
 ### TODO 3 - Solution 
 In this image you can see a possible solution:
 <p align="center">
-<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_12_.png?raw=true" width="500">
+<img src="https://github.com/arnaubonada/Game-Installer-Creation/blob/main/docs/images/fig_12.png?raw=true" width="500">
 </p>
 <p align="center">
 Figure 12. Simplest solution of TODO 3

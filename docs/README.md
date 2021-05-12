@@ -227,6 +227,11 @@ And this is how the installer would look:
 Figure 13. Installer after TODO 3
 </p>
 
+## Download the Handout and the Solution
+[Here](https://github.com/arnaubonada/Game-Installer-Creation/releases/tag/1) you can find the **Handout** Release. 
+
+[Here](https://github.com/arnaubonada/Game-Installer-Creation/releases/tag/0.1) you can find the **Solution** Release. 
+
 ## Documentation
 [Installation](https://docs.microsoft.com/en-us/windows/win32/dxtecharts/installation-and-maintenance-of-games)
 
